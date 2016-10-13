@@ -1,0 +1,363 @@
+
+input[type=email] {
+  border: 3px solid #d2d2d2;
+  border-radius: 11px 11px 12px 11px;
+  height: 25px;
+}
+
+input[type=text] {
+  border: 3px solid #d2d2d2;
+  border-radius: 11px 11px 12px 11px;
+  height: 25px;
+}
+input[type=radio] {
+display:none;
+}
+
+.irene{ /*lien Linkedin Irene*/
+color: rgb(53, 77, 98);
+font-family:Merriweather,Palatino;
+font-weight: bold;
+font-size: 14px;
+margin-right:5px;
+margin-top: 18px;
+text-decoration: none;
+}
+
+.photoIrene{
+width: 40px;
+border-radius: 50px;
+border: 2px solid rgb(53, 77, 98);
+margin-top: 6px;
+margin-right: 9px;
+margin-top: 23px;
+margin-bottom: -15px;
+}
+
+.logoLunatech{
+width:170px;
+float:left;
+margin-left:50px;
+}
+
+.logoScala{
+width:126px;
+float:right;
+margin-right:50px;
+}
+
+
+/*DEBUT BOUTONS RADIOS REPONSES*/
+form {
+	margin: 40px 0;
+}
+.rowbouton {
+	clear: both;
+	margin: 0 10px;
+}
+
+label {
+  width: 200px;
+  border-radius: 3px;
+}
+.label1 {
+width:140px;
+}
+.label21 {
+width: 249px;
+}
+.label22{
+width: 288px;
+}
+.label23{
+width: 330px;
+
+}
+.label3{
+width: 293px;
+}
+.label31{
+width: 285px;
+}
+
+.label41{
+width: 163px;
+}
+.label42{
+width: 207px;
+}
+.label43{
+width: 183px;
+}
+
+.label41{
+width: 165px;
+}
+.label42{
+width: 207px;
+}
+.label43{
+width: 187px;
+}
+.label51{
+width: 244px;
+}
+.label52{
+width: 248px;
+}
+.label53{
+width: 168px;
+}
+.label61{
+width: 220px;
+}
+.label62{
+width: 228px;
+}
+.label63{
+width: 215px;
+}
+
+
+
+
+
+/* style label */
+input.radio:empty ~ label {
+	position: relative;
+	float: left;
+	line-height: 1.2 em;
+	margin-top: 1em;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+input.radio:empty ~ label:before {
+	position: absolute;
+	display: block;
+	top: 0;
+    bottom: 0;
+    left: 0;
+	content: '';
+	width: 2em;
+	background: #D1D3D4;
+	border-radius: 3px 3px 3px 3px;
+}
+
+/* toggle hover */
+input.radio:hover:not(:checked) ~ label:before {
+	content:'\2714';
+	color: #C2C2C2;
+}
+
+input.radio:hover:not(:checked) ~ label {
+	color: #888;
+}
+
+/* toggle on */
+input.radio:checked ~ label:before {
+	content:'\2714';
+	color: #9CE2AE;
+	background-color: #4DCB6D;
+}
+
+input.radio:checked ~ label {
+	color: #777;
+}
+
+/* radio focus */
+
+/*FIN BOUTONS RADIOS REPONSES*/
+
+
+
+.input {
+     border-radius:12px 0 12px 0;
+     padding: 5px 15px 5px 16px;
+     background: #f03d3d;
+     border:none;
+
+
+     color:#e1e3e4;
+     font-size:17px;
+     line-height: 16px;
+     font-family: Gill Sans, Verdana;
+     text-transform: uppercase;
+     letter-spacing: 2px;
+     font-weight: bold;
+}
+
+.container{
+background: #e1e3e4;
+padding: 20px;
+
+}
+.rowTitre{
+
+/*Fond:*/
+ padding: 1px;
+ /*background-color: #59748c;  /*#d34836;*/
+ padding-bottom: 66px;
+ background-image:url(https://s-media-cache-ak0.pinimg.com/564x/35/70/76/357076ab04e208c21a1b7e908356f599.jpg);
+ width:100%;
+ padding-top:22px;
+
+/*Titre:*/
+
+
+text-align: center;
+color: #354d62;
+font-size: 32px;
+line-height: 26px;
+letter-spacing: 2px;
+font-weight: bold;
+text-transform: uppercase;
+text-align: center;
+/*font-family: Gill Sans, Verdana;*/
+
+
+}
+
+
+
+
+.rowPrincipal{
+/*texte*/
+text-align: center;
+color: #354d62;
+font-family: 'Merriweather','Palatino';font-weight: bold;
+font-size: 20px;
+
+}
+
+
+.rowTitreBande{
+background-color: rgb(53, 77, 98);
+padding: 3px;
+}
+
+.rowIn {
+color: #354d62;
+font-family: times, Times New Roman, times-roman, georgia, serif;
+font-size: 20px;
+font-weight: normal;
+padding-left:42%;
+padding-bottom:60px;
+
+}
+
+.rowTitre2{
+background-color:#f03d3d; /*#d65f5f;*/
+color: #e1e3e4;
+margin-top: 32px;
+font-family: Gill Sans, Verdana;
+font-size: 10px;
+line-height: 26px;
+text-transform: uppercase;
+letter-spacing: 2px;
+font-weight: bold;
+}
+
+.question{
+color: #38bdbd;
+}
+
+/*background-color: #3c948b; /*vert*/
+
+.custom-dropdown--large {
+    font-size: 1.5em;
+}
+
+.custom-dropdown--small {
+    font-size: .7em;
+}
+
+.custom-dropdown__select{
+
+    padding: 0.3em; /* add some space*/
+    margin: 0; /* remove default margins */
+}
+
+.custom-dropdown__select--white {
+    background-color: #fff;
+    color: #444;
+}
+
+@supports (pointer-events: none) and
+      ((-webkit-appearance: none) or
+      (-moz-appearance: none) or
+      (appearance: none)) {
+
+    .custom-dropdown {
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+        border-radius: 17px 17px 17px 17px;
+        border: 3px solid #c2c2c2;
+    }
+
+    .custom-dropdown__select {
+        padding-right: 2.5em; /* accommodate with the pseudo elements for the dropdown arrow */
+        border: 0;
+        border-radius: 10px;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+    }
+
+    .custom-dropdown::before,
+    .custom-dropdown::after {
+        content: "";
+        position: absolute;
+        pointer-events: none;
+    }
+
+    .custom-dropdown::after { /*  Custom dropdown arrow */
+        content: "\25BC";
+        height: 1em;
+        font-size: .625em;
+        line-height: 1;
+        right: 1.2em;
+        top: 50%; margin-top: -.5em;
+    }
+
+    .custom-dropdown::before { /*  Custom dropdown arrow cover */
+        width: 2em;
+        right: 0; top: 0; bottom: 0;
+        border-radius: 0 3px 3px 0;
+    }
+
+    .custom-dropdown__select[disabled] {
+        color: rgba(0,0,0,.3);
+    }
+
+    .custom-dropdown.custom-dropdown--disabled::after {
+        color: rgba(0,0,0,.1);
+    }
+
+    /* White dropdown style */
+    .custom-dropdown--white::before {
+        top: 1.5em; bottom: .5em;
+        background-color: #fff;
+        border-left: 1px solid rgba(0,0,0,.1);
+    }
+
+    .custom-dropdown--white::after {
+        color: #d2d2d2;
+        margin-top: -4px;
+    }
+
+    /* FF only temp fix */
+    @-moz-document url-prefix() {
+        .custom-dropdown__select{
+         padding-right: 3.9em;
+         border: 3px solid #d2d2d2;
+         border-radius: 17px 17px 17px 17px;
+         }
+        .custom-dropdown--large .custom-dropdown__select { padding-right: 1.3em }
+        .custom-dropdown--small .custom-dropdown__select { padding-right: .5em }
+    }
+}

@@ -1,0 +1,168 @@
+@import model.Mail
+@import model.Question
+
+
+
+@(mail: Mail)
+
+
+<html>
+<head>
+
+
+    <link rel="stylesheet" type="text/css" href="@routes.Assets.versioned("stylesheets/bonjour.css")"/>
+    <link rel="stylesheet" media="screen and (max-width: 391px)" href="@routes.Assets.versioned("stylesheets/responsive.css")" />
+
+</head>
+<body>
+
+<div class ="container">
+
+    <div class="rowTitreBande"></div>
+        <div class="rowTitre">
+
+
+
+            <nav class="main">
+                <h1> Quiz Scala </h1>
+                <img class="logoLunatech" src="@routes.Assets.versioned("images/lunalogo.png")">
+                <img class="logoScala" src="@routes.Assets.versioned("images/logoScala.png")">
+            </nav>
+
+
+
+        </div>
+
+    <div class="rowTitreBande"></div>
+
+
+
+    <div class = "rowPrincipal">
+
+        <img class="photoIrene" src="@routes.Assets.versioned("images/irene.jpg")">
+        <a class="irene" href="https://www.linkedin.com/in/irene-grootenboer-907521109?trk=nav_responsive_tab_profile_pic">Réalisé par Irene GROOTENBOER - Stagiaire chez Lunatech</a>
+
+        <br/>
+
+        <div class ="rowTitre2">
+            <h1>@mail.getMail()</h1>
+            <form method="get" action="/mail/@mail.getMail()"></form>
+        </div>
+
+            <form method="post" action="/newUser/">
+
+                <p style="margin-right: 63px;">
+                    <label for="Adresse email"> Adresse email :</label>
+                    <input type="email" name="email" id="Adresse email"  size="30"  maxlength="50" autofocus invalid required methode="email.txt" autocomplete="on"/>
+                </p>
+
+                <p style="margin-left: -43px;">
+                    <label for="nom"> Nom :</label>
+                    <input type="text" name="nom" id="nom" />
+                </p>
+
+                <p style="margin-left: -69px;">
+                    <label for="prenom"> Prénom :</label>
+                    <input type="text" name="prenom" id="prenom" />
+                </p>
+
+                <p>
+
+                    <label for="presence" >La raison de votre presence à Scala I.O :
+                        <span  class="custom-dropdown custom-dropdown--white">
+                        <select name="presence" id="presence" class="custom-dropdown__select custom-dropdown__select--white">
+                            <option>Le fun</option>
+                            <option>Votre boite vous a forcé à venir</option>
+                            <option>Vous êtes un Scala champion</option>
+                            <option>C’est par où la sortie ?</option>
+                        </select>
+                        </span>
+                    </label>
+
+                <!--    <label for="id_demo">La raison de votre presence a Scala I.O:</label><br/>
+                    <span class="select-wrapper"></span>
+                    <select name="presence" id="id_demo">
+                        <option value="fun">Le fun</option>
+                        <option value="boite">Votre boite vous a forcé à venir</option>
+                        <option value="champion">Vous êtes un Scala champion</option>
+                        <option value="sortie">C’est par où la sortie ?</option>
+                    </select>-->
+                </p>
+
+            <div class ="rowTitre2">
+                <h1>Le quiz</h1>
+            </div>
+
+                    <br/>
+
+                 <img style="margin-top:12px; width: 30px;" src="@routes.Assets.versioned("images/1.png")"> <p><label> Quelle est la date de création de Lunatech ?</label> </p>
+                <div class="rowIn">
+
+                    <div class="rowbouton"> <input class="radio" type="radio" value="1" name="q1" id="r11"/> <label class="label1" for="r11">1993</label></div>
+                    <div class="rowbouton"> <input class="radio" type="radio" value="2" name="q1" id="r12"/> <label class="label1" for="r12">1994</label></div>
+                    <div class="rowbouton"> <input class="radio" type="radio" value="3" name="q1" id="r13"/> <label class="label1" for="r13">1995</label></div>
+                </div>
+
+                    <br/>
+
+                  <img style="margin-top:12px; width: 30px;"src="@routes.Assets.versioned("images/2.png")"><p> <label> Où sont situés les deux locaux de Lunatech ?</label> </p>
+                <div class="rowIn">
+                    <div class="rowbouton"> <input type="radio" class="radio" value="1" name="q2" id="r21"/> <label class="label21" for="r21">Tatooine / Westeros</label></div>
+                    <div class="rowbouton"> <input type="radio" class="radio" value="2" name="q2" id="r22"/> <label class="label22" for="r22">Haut-de-Seine / Leiden</label></div>
+                    <div class="rowbouton"> <input type="radio" class="radio" value="3" name="q2" id="r23"/> <label class="label23" for="r23">Marne-la-vallée / Rotterdam</label></div>
+                </div>
+
+                    <br/>
+
+                 <img style="margin-top:12px; width: 30px;" src="@routes.Assets.versioned("images/3.png")"><p> <label> Comment compiler un programme Scala ?</label> </p>
+                <div class="rowIn">
+                    <div class="rowbouton"> <input type="radio" class="radio" value="1" name="q3" id="r31"/> <label class="label31" for="r31"> scala HelloWorld.scala</label></div>
+                    <div class="rowbouton"> <input type="radio" class="radio" value="2" name="q3" id="r32"/> <label class="label3" for="r32"> scalac HelloWorld.scala</label></div>
+                    <div class="rowbouton"> <input type="radio" class="radio" value="3" name="q3" id="r33"/> <label class="label3" for="r33"> scalap HelloWorld.scala</label></div>
+                </div>
+
+                    <br/>
+
+                 <img style="margin-top:12px;width: 30px;" src="@routes.Assets.versioned("images/4.png")"><p><label> Qu'est ce que "Nothing" en Scala?</label> </p>
+                <div class="rowIn">
+                    <div class="rowbouton"> <input type="radio" class="radio" value="1" name="q4" id="r41"/> <label class="label41" for="r41">Un type</label></div>
+                    <div class="rowbouton"> <input type="radio" class="radio" value="2" name="q4" id="r42"/> <label class="label42" for="r42">Une méthode</label></div>
+                    <div class="rowbouton"> <input type="radio" class="radio" value="3" name="q2" id="r43"/> <label class="label43" for="r43">Une classe</label></div>
+                </div>
+
+
+                    <br/>
+
+                 <img style="margin-top:12px;width: 30px;" src="@routes.Assets.versioned("images/5.png")"><p><label> En Scala, quelle est la notation de commodité pour l'utilisation de monades ?</label> </p>
+                <div class="rowIn">
+                    <div class="rowbouton"> <input type="radio" class="radio" value="1" name="q5" id="r51"/> <label class="label51" for="r51">do comprehension</label></div>
+                    <div class="rowbouton"> <input type="radio" class="radio" value="2" name="q5" id="r52"/> <label class="label52" for="r52">for comprehension</label></div>
+                    <div class="rowbouton"> <input type="radio" class="radio" value="3" name="q5" id="r53"/> <label class="label53" for="r53">flapMap</label></div>
+                </div>
+
+                    <br/>
+
+                 <img style="margin-top:12px; width: 30px;" src="@routes.Assets.versioned("images/6.png")"><p><label> Quel est le créateur du language Scala ?</label> </p>
+                <div class="rowIn">
+                    <div class="rowbouton"> <input type="radio" class="radio" value="1" name="q6" id="r61"/> <label class="label61" for="r61">Flaminio Scala</label></div>
+                    <div class="rowbouton"> <input type="radio" class="radio" value="2" name="q6" id="r62"/> <label class="label62" for="r62">Martin Odersky</label></div>
+                    <div class="rowbouton"> <input type="radio" class="radio" value="3" name="q6" id="r63"/> <label class="label63" for="r63">Peter Jackson</label></div>
+                </div>
+
+                    <br/>
+                <p style="color: #d34836;">Vérifiez bien d'avoir répondu a toutes les questions avant de continuer ! </p>
+
+
+                <p> <input class="input" type="submit" value=" Valider "/> </p>
+
+
+            </form>
+        </div>
+
+
+
+
+</div>
+</body>
+</html>
+

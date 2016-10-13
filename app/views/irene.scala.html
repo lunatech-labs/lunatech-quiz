@@ -1,0 +1,45 @@
+@import model.Question
+@import controllers.QuestionAnswerForm
+@import controllers.QuestionAnswerForm
+
+
+
+@(question: Question, form: Form[QuestionAnswerForm])
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="irene.css">
+</head>
+<body>
+
+  <div class = "container" style="background: grey; padding:45px;">
+      <div class = "row">
+          <div class ="element">
+                <img src="https://pbs.twimg.com/profile_images/637166799541239808/Qc8LGbC5.png" style="width:100px;">
+          </div>
+          <div class ="element">
+              <h1> @question.getQuestion() </h1>
+              <form method="post" action="/question/@question.getId()"> <!--Met question et possibilités-->
+
+                  <input type="hidden"  name="id" value="@question.getId()" />
+                  @for(possibility <- question.getPossibilities()) {
+                  <div class="row">
+                      <label><input  type="radio"  value="@possibility"  name="answer"  />@possibility   </label>
+                  </div>
+                  }
+
+                <input type="submit" value="Suivant" action="/question/.getQuestion(id).getNextQuestion()" style=" border-radius:12px 0 12px 0; font:bold 12px Verdana; padding:6px 0 6px 0;background: #d34836; border:none; color:#fff;margin-top:15px;" />
+
+              </form>
+
+
+
+
+          </div>
+
+      </div>
+
+
+  </div>
+</body>
+</html>
+

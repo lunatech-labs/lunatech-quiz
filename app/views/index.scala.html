@@ -1,0 +1,150 @@
+@*
+ * This template takes a single argument, a String containing a
+ * message to display.
+ *@
+@(message: String)
+
+@*
+ * Call the `main` template with two arguments. The first
+ * argument is a `String` with the title of the page, the second
+ * argument is an `Html` object containing the body of the page.
+ *@
+@main("Welcome to Play") {
+
+    @*
+     * Get an `Html` object by calling the built-in Play welcome
+     * template and passing a `String` message.
+     *@
+    @play20.welcome(message, style = "Java")
+
+}
+
+
+
+
+
+
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="@routes.Assets.versioned("stylesheets/index.css")"/>
+    <link rel="stylesheet" media="screen and (max-width: 391px)" href= />
+    <link href="@routes.Assets.versioned("stylesheets/red.css")">
+    <script src="javascripts/icheck.js"></script>
+</head>
+<body>
+
+<div class = "container">
+
+    <div class="rowTitreBande"></div>
+    <div class="rowTitre">
+
+       <!-- <a class="irene" href="https://www.linkedin.com/in/irene-grootenboer-907521109?trk=nav_responsive_tab_profile_pic">Réalisé par Irene GROOTENBOER</a>
+        <img class="photoIrene" src="@routes.Assets.versioned("images/irene.jpg")">
+        <br/>-->
+
+        <nav class="main">
+            <h1> Quiz Scala </h1>
+            <img class="logoLunatech" src="@routes.Assets.versioned("images/lunalogo.png")">
+            <img class="logoScala" src="@routes.Assets.versioned("images/logoScala.png")">
+        </nav>
+
+
+
+    </div>
+
+    <div class="rowTitreBande"></div>
+    <div class = "rowPrincipal">
+
+       <img class="photoIrene" src="@routes.Assets.versioned("images/irene.jpg")">
+        <a class="irene" href="https://www.linkedin.com/in/irene-grootenboer-907521109?trk=nav_responsive_tab_profile_pic">Réalisé par Irene GROOTENBOER - Stagiaire chez Lunatech</a>
+
+        <br/>
+
+        <div class ="rowTitre2">
+            <h1> Presentation du quiz </h1>
+        </div>
+        <div class="presentation">
+            <br/>
+            <h3> Vous êtes un pro du Scala et vous êtes interessé par Lunatech ? Ce quiz est fait pour vous !</h3>
+
+        <div class="presentation1">
+            <br/>
+            <div class="mail1">
+                <img class="mail"src="@routes.Assets.versioned("images/email.png")">
+            </div>
+            <div class="texteMail">
+                <p>Complétez vos coordonnées</p>  <br/>
+            </div>
+        </div>
+        <div class="presentation2">
+            <div class="fleche1">
+
+                <img class="fleche"src="@routes.Assets.versioned("images/arrow.png")">
+                <br/>
+            </div>
+            <div class="textefleche"></div>  <br/>
+        </div>
+
+        <div class="presentation3">
+            <div class="quiz1">
+               <!-- <img class="logoScala"src="@routes.Assets.versioned("images/logoScala.png")">-->
+                <img class="quiz"src="@routes.Assets.versioned("images/grades.png")">
+            </div>
+            <p class="texteQuiz">
+                <p>Répondez correctement aux 6 questions de ce quiz</p> <br/>
+            </div>
+        </div>
+
+        <div class="presentation4">
+            <div class="fleche1">
+                <img class="fleche"src="@routes.Assets.versioned("images/arrow.png")">
+            </div>
+            <div class="textefleche"></div>
+            <br/>
+        </div>
+        <div class="presentation5">
+            <div class="cadeauu1">
+                <img style="width:15%;"name="cadeauPetit"src="@routes.Assets.versioned("images/ipad.png")">
+            </div>
+            <div class="texteCadeauu">
+                <p> Participez au tirage au sort pour tenter de gagner un cadeau</p>
+                <p>Vous êtes prêt?</p>
+            </div>
+        </div>
+
+
+    </div>
+
+        </br>
+        </br>
+
+
+        <form method="post" action="/mail/1" style="text-align: center;">
+
+          <p>
+           <input class="input" type="submit" value=" Continuer"/>
+          </p>
+
+        </form>
+
+    <!--<img class="photoIrene" src="@routes.Assets.versioned("images/irene.jpg")">
+    <a class="irene" href="https://www.linkedin.com/in/irene-grootenboer-907521109?trk=nav_responsive_tab_profile_pic">Réalisé par Irene GROOTENBOER - Stagiaire chez Lunatech</a>
+
+    <br/>-->
+    </div>
+   </div>
+</div>
+
+
+</body>
+
+</html>
+
+
+<!--<img style="width:5%;"name="cadeauPetit"src="@routes.Assets.versioned("images/cadeau5.png")">
+<img style="width:6%;"name="cadeauGrand"src="@routes.Assets.versioned("images/cadeau.png")">
+<img style="width:7%;"name="cadeauPetit"src="@routes.Assets.versioned("images/cadeau2.png")">
+<img style="width:8%;"name="cadeauGrand"src="@routes.Assets.versioned("images/cadeau3.png")">
+<img style="width:7%;"name="cadeauPetit"src="@routes.Assets.versioned("images/cadeau4.png")">
+<img style="width:6%;"name="cadeauGrand"src="@routes.Assets.versioned("images/cadeau6.png")">
+<img style="width:5%;"name="cadeauPetit"src="@routes.Assets.versioned("images/cadeau7.png")">-->

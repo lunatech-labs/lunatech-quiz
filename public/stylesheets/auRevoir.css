@@ -1,0 +1,103 @@
+.container{
+background: #e1e3e4;
+padding: 20px;
+
+}
+.rowTitreBande{
+background-color: rgb(53, 77, 98);
+padding: 3px;
+}
+
+.rowPrincipal{
+/*texte*/
+text-align: center;
+color: #354d62;
+font-family: 'Merriweather','Palatino';
+font-weight: bold;
+font-size: 20px;
+}
+
+.rowTitre{
+
+*Fond:*/
+padding: 1px;
+/*background-color: #59748c;  /*#d34836;*/
+padding-bottom: 66px;
+background-image:url(https://s-media-cache-ak0.pinimg.com/564x/35/70/76/357076ab04e208c21a1b7e908356f599.jpg);
+width:100%;
+padding-top:22px;
+/*Titre:*/
+
+text-align: center;
+color: #354d62;
+font-size: 32px;
+line-height: 26px;
+letter-spacing: 2px;
+font-weight: bold;
+text-transform: uppercase;
+/*font-family: Gill Sans, Verdana;*/
+
+}
+.irene{ /*lien Linkedin Irene*/
+color: rgb(53, 77, 98);
+font-family:Merriweather,Palatino;
+font-weight: bold;
+font-size: 14px;
+margin-right:5px;
+margin-top: 18px;
+text-decoration: none;
+}
+
+.photoIrene{
+width: 40px;
+border-radius: 50px;
+border: 2px solid rgb(53, 77, 98);
+margin-top: 6px;
+margin-right: 9px;
+margin-top: 23px;
+margin-bottom: -15px;
+}
+
+.logoLunatech{
+width:170px;
+float:left;
+margin-left:50px;
+}
+
+.logoScala{
+width:126px;
+float:right;
+margin-right:50px;
+}
+
+
+
+.input {
+ border-radius: 12px 0 12px 0;
+ padding: 5px 15px 5px 16px;
+ background: #f03d3d;
+ border: none;
+ color: #e1e3e4;
+ font-size: 17px;
+ line-height: 16px;
+ font-family: Gill Sans, Verdana;
+ text-transform: uppercase;
+ letter-spacing: 2px;
+ font-weight: bold;
+ }
+
+.rowTitre2{
+background-color:#f03d3d; /*#d65f5f;*/
+color: #e1e3e4;
+margin-top: 32px;
+font-family: Gill Sans, Verdana;
+font-size: 10px;
+line-height: 26px;
+text-transform: uppercase;
+letter-spacing: 2px;
+font-weight: bold;
+text-align: center;
+}
+
+
+
