@@ -7,6 +7,7 @@
 <head>
     <link rel="stylesheet" type="text/css" href="@routes.Assets.versioned("stylesheets/auRevoir.css")"/>
     <link rel="stylesheet" media="screen and (max-width: 391px)" href="@routes.Assets.versioned("stylesheets/responsive.css")" />
+
 </head>
 <body>
 
@@ -14,8 +15,6 @@
 
     <div class="rowTitreBande"></div>
     <div class="rowTitre">
-
-
         <nav class="main">
             <h1> Quiz Scala </h1>
             <img class="logoLunatech" src="@routes.Assets.versioned("images/lunalogo.png")">
@@ -35,44 +34,41 @@
         <div class ="rowTitre2">
             <h1> Resultats </h1>
         </div>
+
         <br/>
+
         <h1>Votre score est de @score/6 !</h1>
-        <img class="gif" src="@routes.Assets.versioned("gif/bravo.gif")">
-       <!-- <img src="https://online-shirt-designer.ch/img/Designs/Designklein-15367807.png" style="width:90px;">-->
+
+        <br/>
+
+        <img style="width: 95px;" src="@routes.Assets.versioned("images/eyeglasses.png")">
+
         <br/>
         <br/>
         <br/>
 
+        <p>Votre score a bien été enregistré. Serez vous l'heureux gagnant de l'Ipad?</p>
+        <br/>
+        <p>Pour le savoir restez avec nous sur le stand et assitez aux tirage au sort ! </p>
+        <br/>
+        <br/>
 
+        <img style="width: 95px;" src="@routes.Assets.versioned("images/balloons.png")">
+        <img style="width: 95px;" name="cadeauGrand"src="@routes.Assets.versioned("images/gift.png")">
+        <img style="width: 95px;" name="cadeauGrand"src="@routes.Assets.versioned("images/confetti.png")">
+        <br/>
+        <br/>
 
-        <img src="https://openclipart.org/image/2400px/svg_to_png/218397/-Email.png" style="width: 42px; margin-bottom: -7px;">
-        <label>   Nous vous enverrons un mail en cas de victoire </label>
-        <p>Lunatech vous remercie d'avoir participé !</p>
-        <br/><br/>
-
-
-       <div row="imageCadeaux">
-           <img style="width: 95px;" name="cadeauGrand"src="@routes.Assets.versioned("images/gift.png")">
-           <img style="width: 50px;" name="cadeauGrand"src="@routes.Assets.versioned("images/faq.png")">
-
-       <!-- <img style="width:5%;"name="cadeauPetit"src="@routes.Assets.versioned("images/cadeau5.png")">
-        <img style="width:6%; margin-bottom:-1px;"name="cadeauGrand"src="@routes.Assets.versioned("images/cadeau.png")">
-        <img style="width:7%;margin-bottom:-3px;"name="cadeauPetit"src="@routes.Assets.versioned("images/cadeau2.png")">
-        <img style="width:8%; margin-bottom:-4px;"name="cadeauGrand"src="@routes.Assets.versioned("images/cadeau3.png")">
-        <img style="width:7%; margin-bottom:-3px;"name="cadeauPetit"src="@routes.Assets.versioned("images/cadeau4.png")">
-        <img style="width:6%;margin-bottom:-1px;"name="cadeauGrand"src="@routes.Assets.versioned("images/cadeau6.png")">
-        <img style="width:5%;"name="cadeauPetit"src="@routes.Assets.versioned("images/cadeau7.png")">-->
-
-       </div>
-        <br/><br/>
+        <p>Lunatech vous remercie d'avoir participé</p>
 
         <p>Un peu de temps pour visiter notre <a style="color: #3c948b;" href="http://lunatech.com/fr/"> site internet</a> ?</p>
 
-        <br/><br/>
+        <br/>
+
+        <br/>
         <form method="post" action="/">
 
             <p>  <input class="input"type="submit" value=" Au revoir ! "/>  </p>
-
 
         </form>
 

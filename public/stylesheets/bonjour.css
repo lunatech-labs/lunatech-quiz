@@ -64,7 +64,7 @@ label {
 width:140px;
 }
 .label21 {
-width: 249px;
+width: 257px;
 }
 .label22{
 width: 288px;
@@ -296,7 +296,7 @@ color: #38bdbd;
         display: inline-block;
         vertical-align: middle;
         border-radius: 17px 17px 17px 17px;
-        border: 3px solid #c2c2c2;
+       border: 3px solid #c2c2c2;
     }
 
     .custom-dropdown__select {

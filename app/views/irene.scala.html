@@ -20,7 +20,7 @@
               <h1> @question.getQuestion() </h1>
               <form method="post" action="/question/@question.getId()"> <!--Met question et possibilités-->
 
-                  <input type="hidden"  name="id" value="@question.getId()" />
+             <!--     <input type="hidden"  name="id" value="@question.getId()" />
                   @for(possibility <- question.getPossibilities()) {
                   <div class="row">
                       <label><input  type="radio"  value="@possibility"  name="answer"  />@possibility   </label>
@@ -42,4 +42,3 @@
   </div>
 </body>
 </html>
-

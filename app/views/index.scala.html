@@ -1,35 +1,30 @@
 @*
- * This template takes a single argument, a String containing a
- * message to display.
- *@
+* This template takes a single argument, a String containing a
+* message to display.
+*@
 @(message: String)
 
 @*
- * Call the `main` template with two arguments. The first
- * argument is a `String` with the title of the page, the second
- * argument is an `Html` object containing the body of the page.
- *@
-@main("Welcome to Play") {
+* Call the `main` template with two arguments. The first
+* argument is a `String` with the title of the page, the second
+* argument is an `Html` object containing the body of the page.
+*@
+@main("Quiz Scala - Lunatech") {
 
-    @*
-     * Get an `Html` object by calling the built-in Play welcome
-     * template and passing a `String` message.
-     *@
-    @play20.welcome(message, style = "Java")
+@*
+* Get an `Html` object by calling the built-in Play welcome
+* template and passing a `String` message.
+*@
+@play20.welcome(message, style = "Java")
 
 }
-
-
-
-
-
-
 <html>
 <head>
     <link rel="stylesheet" type="text/css" href="@routes.Assets.versioned("stylesheets/index.css")"/>
     <link rel="stylesheet" media="screen and (max-width: 391px)" href= />
     <link href="@routes.Assets.versioned("stylesheets/red.css")">
-    <script src="javascripts/icheck.js"></script>
+
+
 </head>
 <body>
 
@@ -104,7 +99,7 @@
         </div>
         <div class="presentation5">
             <div class="cadeauu1">
-                <img style="width:15%;"name="cadeauPetit"src="@routes.Assets.versioned("images/ipad.png")">
+                <img style="width:12.5%;"name="cadeauPetit"src="@routes.Assets.versioned("images/ipad.png")">
             </div>
             <div class="texteCadeauu">
                 <p> Participez au tirage au sort pour tenter de gagner un Ipad !</p>

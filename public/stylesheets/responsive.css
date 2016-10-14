@@ -9,3 +9,11 @@
 	}
 
 	}
+
+@media only screen and (max-width: 450px) {
+
+	.rowIn{
+	padding-left: 10%;
+	}
+
+	}

@@ -12,10 +12,12 @@ GET     /question/:id                  controllers.HomeController.getQuestion(id
 POST    /question/:id                  controllers.HomeController.answerQuestion(id: Long)
 #POST   /question/:id                  controllers.HomeController.getQuestion(id: Long).getNextQuestion()
 GET     /score/:id                     controllers.HomeController.getScore(id: Long)
-#GET     /tirage/                       controllers.HomeController.getRandomElement()
+#GET     /tirage/                      controllers.HomeController.getRandomElement()
+
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
+GET     /favicon.ico                controllers.Assets.at(path="/public/images", file="favicon.ico")
 
 
 
