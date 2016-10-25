@@ -21,15 +21,12 @@ import java.io.InputStreamReader;
 import java.io.LineNumberReader;
 import java.util.Random;
 import java.util.Vector;
-
-
-
+import play.*;
 
 public class HomeController extends Controller {
 
     @Inject
     private FormFactory formFactory;
-
 
     public Result goIndex() {
         return redirect("/");
@@ -52,7 +49,41 @@ public class HomeController extends Controller {
         return ok("Score de "+ score+ "/6");
     }
 
+    private static final String AUTHORIZATION = "authorization";
+    private static final String WWW_AUTHENTICATE = "WWW-Authenticate";
+    private static final String REALM = "Basic realm=\"Your Realm Here\"";
 
+    private Boolean authorized() throws Throwable {
+      String authHeader = request().getHeader(AUTHORIZATION);
+      if (authHeader == null) {
+          response().setHeader(WWW_AUTHENTICATE, REALM);
+          return false;
+      }
+
+      String auth = authHeader.substring(6);
+      byte[] decodedAuth = new sun.misc.BASE64Decoder().decodeBuffer(auth);
+      String[] credString = new String(decodedAuth, "UTF-8").split(":");
+
+      if (credString == null || credString.length != 2) {
+          return false;
+      }
+
+      String username = credString[0];
+      String password = credString[1];
+
+      // Username and password from configuration
+      String user = Play.application().configuration().getString("username");
+      String pass = Play.application().configuration().getString("password");
+      return (user.equals(username) && pass.equals(password));
+    }
+
+    public Result downloadLoosers() throws Throwable {
+      return authorized() ? ok(new java.io.File("emailLooser.txt")) : unauthorized();
+    }
+
+    public Result downloadWinners() throws Throwable  {
+      return authorized() ? ok(new java.io.File("emailWinner.txt")) : unauthorized();
+    }
 
     public Result newUser() {
         Map<String, String[]> form = request().body().asFormUrlEncoded();
@@ -134,46 +165,26 @@ public class HomeController extends Controller {
 
     public static String getRandomElement (Vector v) {
         Random generator = new Random();
-        int rnd = generator.nextInt(v.size() - 1);
+        int rnd = v.size() == 1 ? 0 : generator.nextInt(v.size() - 1);
         return (String)v.get(rnd);
     }
 
 
-    public  static void main (String[] args) throws IOException{
+    public Result winner() throws IOException {
+      String myLine= null;
+      InputStreamReader flog  = null;
+      LineNumberReader llog   = null;
+      Vector<String> valeur = new Vector<String>();
+      flog = new InputStreamReader(new FileInputStream("emailWinner.txt") );
+      llog = new LineNumberReader(flog);
+      while ((myLine = llog.readLine()) != null) {
+          valeur.add(myLine);
+      }
+      Random generator = new Random();
 
-        Random generator = new Random();
-
-        String myLine= null;
-        InputStreamReader flog  = null;
-        LineNumberReader llog   = null;
-        Vector<String> valeur = new Vector<String>();
-        flog = new InputStreamReader(new FileInputStream("emailWinner.txt") );
-        llog = new LineNumberReader(flog);
-
-        while ((myLine = llog.readLine()) != null) {
-            valeur.add(myLine);
-
-        }
-        //if score = 6 only
-        System.out.println("Et le gagnant est..." + getRandomElement(valeur)+ "!!!");
-       // return ok(tirage.render(getRandomElement(valeur)));
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+      //if score = 6 only
+      return ok("Et le gagnant est...  " + getRandomElement(valeur)+ "!!!");
+      }
 
 
 
@@ -237,4 +248,3 @@ public class HomeController extends Controller {
 
 
 }
-

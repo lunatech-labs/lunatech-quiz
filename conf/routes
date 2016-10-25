@@ -12,8 +12,9 @@ GET     /question/:id                  controllers.HomeController.getQuestion(id
 POST    /question/:id                  controllers.HomeController.answerQuestion(id: Long)
 #POST   /question/:id                  controllers.HomeController.getQuestion(id: Long).getNextQuestion()
 GET     /score/:id                     controllers.HomeController.getScore(id: Long)
-#GET     /tirage/                      controllers.HomeController.getRandomElement()
-
+GET     /winner/                       controllers.HomeController.winner()
+GET     /download/winners               controllers.HomeController.downloadWinners()
+GET     /download/loosers               controllers.HomeController.downloadLoosers()
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
